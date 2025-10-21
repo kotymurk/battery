@@ -1,44 +1,125 @@
+/*------------- Батарейка--------- */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.battery {
+.battery-content {
+  position: relative;
   margin: 10px;
   border: 3px solid #000;
   width: 200px;
   height: 80px;
   border-radius: 5px;
+  background-color: #fff;
 }
 
 .battery_top {
-  position: fixed;
-  margin: 30px 196px;
+  position: absolute;
+  margin: 30px 210px;
   width: 6px;
   height: 20px;
   background-color: #000;
 }
-
-.battery_content {
-  position: relative;
-  display: inline-block;
-  border-radius: 10px;
+.charge {
   height: 100%;
-  transition-duration: 2s;
+  position: absolute;
+  bottom: 0;
+  border-radius: 14px;
+  animation: battery 8s linear infinite;
+}
+@keyframes battery {
+  0% {
+    width: 0%;
+    background: red;
+  }
+  25% {
+    width: 25%;
+    background: rgb(255, 220, 192);
+  }
+  50% {
+    width: 50%;
+    background: orange;
+  }
+  75% {
+    width: 75%;
+    background: yellow;
+  }
+  100% {
+    width: 100%;
+    background: rgb(49, 199, 64);
+  }
 }
 
-.content-low {
-  width: 30%;
-  background-color: rgb(255, 0, 0);
+/* ---------------Иконки-------------- */
+
+.line {
+  border: 1px #000 dashed;
 }
 
-.content-middle {
-  width: 60%;
-  background-color: rgb(254, 254, 0);
+body {
+  background-color: #19265c;
 }
 
-.content-full {
+.page__icontest {
+  display: flex;
+  justify-content: space-between;
+}
+/* .icontest__container {
+} */
+._container {
+  padding: 0px 15px;
+  margin: 0 auto;
+  box-sizing: content-box;
+}
+.icontest__items {
+  display: flex;
+  background-color: #fff;
+  border-radius: 20px;
+  height: 200px;
+}
+.icontest__item {
+  flex: 0 1 33.3333%;
+}
+.item-icontest {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 50px 15px;
   width: 100%;
-  background-color: rgb(0, 255, 26);
+}
+.item-icontest__icon .icontest__items {
+  fill: #000;
+}
+
+.header__title {
+  text-align: center;
+  color: #ff7b47;
+  margin: 10px;
+}
+.header__sub-title {
+  margin: 10px;
+}
+.item-icontest__button {
+  border: 1px solid #ff7b47;
+  /* min-height: 20px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  background-color: #ff7b47;
+  line-height: 142%;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease 0s;
+  border-radius: 5px;
+}
+
+.item-icontest__button:hover {
+  background-color: #c2582f;
 }
