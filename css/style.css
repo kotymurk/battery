@@ -60,7 +60,7 @@
 }
 
 body {
-  background-color: #19265c;
+  background-color: #2e3862;
 }
 
 .page__icontest {
@@ -123,4 +123,66 @@ body {
 
 .item-icontest__button:hover {
   background-color: #c2582f;
+}
+
+/* ---------------WEATHER--------------- */
+
+.page_WeatherCards {
+  display: flex;
+  padding: 50px;
+}
+
+.WeatherCards__container {
+  display: flex;
+  padding: 0px 10px;
+}
+
+._container {
+}
+
+.WeatherCards__items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* padding: 50px 15px; */
+  /* width: 100%; */
+}
+
+.WeatherCards__item {
+  flex: 0 1 33.3333%;
+}
+
+.item-WeatherCards {
+  background-color: #fff;
+  border: 20px;
+  height: auto;
+  width: auto;
+  box-shadow: 0px 5px 5px 5px rgb(29, 20, 13, 0.25);
+}
+
+.header__title__data {
+  position: relative;
+  height: 30px;
+  width: 100%;
+  background-color: #7d8cc8;
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+}
+
+.item-WeatherCards__icon {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  margin: 10px;
+}
+
+.item-WeatherCards__icon img {
+  width: 80%;
+}
+
+.header__sub-title__gradus {
+  padding: 20px;
+  text-align: center;
 }
