@@ -130,6 +130,7 @@ body {
 .page_WeatherCards {
   display: flex;
   padding: 50px;
+  justify-content: center;
 }
 
 .WeatherCards__container {
