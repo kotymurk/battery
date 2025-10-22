@@ -135,9 +135,12 @@ body {
 .WeatherCards__container {
   display: flex;
   padding: 0px 10px;
+  height: 300px;
+  width: 250px;
 }
 
-._container {
+.WeatherCards__container:hover {
+  transform: scale(120%);
 }
 
 .WeatherCards__items {
@@ -162,13 +165,13 @@ body {
 }
 
 .header__title__data {
-  position: relative;
   height: 30px;
   width: 100%;
   background-color: #7d8cc8;
   color: #fff;
   text-align: center;
   font-size: 18px;
+  padding: 5px 0px;
 }
 
 .item-WeatherCards__icon {
