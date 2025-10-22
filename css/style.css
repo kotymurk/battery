@@ -159,9 +159,9 @@ body {
 
 .item-WeatherCards {
   background-color: #fff;
-  border: 20px;
   height: auto;
   width: auto;
+  border: 20px;
   box-shadow: 0px 5px 5px 5px rgb(29, 20, 13, 0.25);
 }
 
