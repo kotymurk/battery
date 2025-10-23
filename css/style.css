@@ -250,3 +250,51 @@ body {
   max-width: 250px;
   cursor: pointer;
 }
+/*------------- STEPPER-------- */
+
+.page__stepper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  margin: 100px;
+  background-color: #b87766;
+}
+
+.stepper__container {
+  text-align: center;
+}
+
+.steps {
+  display: flex;
+  justify-content: space-around;
+  background-color: #ffaa94;
+  margin-bottom: 20px;
+  box-shadow: 0px 0px 10px #000;
+  padding: 20px;
+  width: 330px;
+  border-radius: 5px;
+}
+
+.step {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 50%;
+  background: #b87766;
+}
+
+.step.active,
+.step.completed {
+  background-color: #ff7b47;
+}
+
+button {
+  padding: 7px 20px;
+  border: none;
+  border-radius: 5px;
+  background: #ff7b47;
+  color: #fff;
+  cursor: pointer;
+  margin: 10px 5px;
+}
