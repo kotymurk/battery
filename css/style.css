@@ -190,3 +190,38 @@ body {
   padding: 20px;
   text-align: center;
 }
+
+/* ---------------visible-------------- */
+
+.header__title__part {
+  margin-block-start: auto;
+  writing-mode: sideways-lr;
+}
+
+.page__hover {
+  position: absolute;
+}
+
+.hover__container {
+  height: 300px;
+  width: 800px;
+}
+
+.hover__items {
+}
+
+.hover__item {
+}
+
+.item-hover {
+}
+
+.item-hover__icon {
+}
+.item-hover__icon img {
+  width: 40%;
+}
+
+.unvisible__text {
+  display: flex;
+}
