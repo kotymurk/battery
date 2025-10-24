@@ -113,16 +113,20 @@
     </section>
 
     <section class="page__stepper">
-      <div class="stepper__container">
-        <div class="steps">
-          <div class="step active">1</div>
-          <div class="step">2</div>
-          <div class="step">3</div>
-          <div class="step">4</div>
-          <div class="step">5</div>
-        </div>
-        <button onclick="changeStep(-1)" id="prevBtn" disabled>Prev</button>
-        <button onclick="changeStep(1)" id="nextBtn">Next</button>
+      <div class="progress-container">
+        <ul class="progress-bar">
+          <li class="step completed">1</li>
+          <li class="step completed">2</li>
+          <li class="step completed">3</li>
+          <li class="step active">4</li>
+          <li class="step inactive">5</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="page__circle">
+      <div class="circle-progress" style="--progress: 75">
+        <span class="progress-text">75%</span>
       </div>
     </section>
   </body>

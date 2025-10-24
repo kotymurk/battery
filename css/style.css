@@ -253,48 +253,113 @@ body {
 /*------------- STEPPER-------- */
 
 .page__stepper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 30px;
   margin: 100px;
-  background-color: #b87766;
 }
 
-.stepper__container {
-  text-align: center;
+.progress-container {
+  width: 80%;
+  max-width: 600px;
 }
 
-.steps {
+.progress-bar {
+  list-style: none;
   display: flex;
-  justify-content: space-around;
-  background-color: #ffaa94;
-  margin-bottom: 20px;
-  box-shadow: 0px 0px 10px #000;
-  padding: 20px;
-  width: 330px;
-  border-radius: 5px;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.progress-bar::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: #7b7373;
+  transform: translateY(-50%);
+  z-index: -1;
 }
 
 .step {
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
   border-radius: 50%;
-  background: #b87766;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  border: 3px solid transparent;
+  background-color: #d3d3d3;
+  position: relative;
+  transition: background-color 0.3s, border-color 0.3s;
 }
 
-.step.active,
 .step.completed {
-  background-color: #ff7b47;
+  background-color: #4caf50;
 }
 
-button {
-  padding: 7px 20px;
-  border: none;
-  border-radius: 5px;
-  background: #ff7b47;
-  color: #fff;
-  cursor: pointer;
-  margin: 10px 5px;
+.step.active {
+  background-color: #6e3fd2;
+  border-color: #4727b0;
+}
+
+.step.completed::after,
+.step.active::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  width: 100%;
+  height: 4px;
+  background-color: #4caf50;
+  transform: translate(50%, -50%);
+  z-index: -2;
+}
+
+.progress-bar li:first-child::after {
+  display: none;
+}
+
+.step.inactive {
+  background-color: #d3d3d3;
+}
+
+/* CIRCLE */
+
+.page__circle {
+  display: flex;
+  justify-content: center;
+}
+
+.circle-progress {
+  --size: 250px;
+  --stroke: 30px;
+  --color: #4ace6b;
+  --track: #57816f;
+
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: radial-gradient(
+      closest-side,
+      rgb(255, 255, 255) calc(100% - 60%),
+      transparent calc(100% - 40%)
+    ),
+    conic-gradient(var(--color) calc(var(--progress) * 1%), var(--track) 0%);
+}
+
+.progress-text {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
 }
